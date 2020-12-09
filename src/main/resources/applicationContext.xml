@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--  
+	<bean id="tv" class="ex01_polymorphism.SamsungTV" init-method="initMethod" destroy-method="destroyMethod" lazy-init="true" scope="singleton" > 반대 : scope="prototype"
+		<constructor-arg index="0" ref="apple"></constructor-arg>
+		<constructor-arg index="1" value="2700000"></constructor-arg>
+	</bean>
+-->
+
+<!-- 
+	<bean id="tv" class="ex01_polymorphism.SamsungTV">
+		<property name="speaker" ref="apple"></property>
+		<property name="price" value="2700000"></property>
+	</bean>
+-->
+
+	<bean id="tv" class="com.springbook.polymorphism.SamsungTV" p:speaker-ref="sony" p:price="2700000" />
+	
+	<bean id="sony" class="com.springbook.polymorphism.SonySpeaker" /> 
+	<bean id="apple" class="com.springbook.polymorphism.AppleSpeaker" /> 
+	
+</beans>
