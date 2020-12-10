@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class HelloServlet
  */
+
 public class HelloServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -16,7 +17,7 @@ public class HelloServlet extends HttpServlet {
      * @see HttpServlet#HttpServlet()
      */
     public HelloServlet() {
-    	System.out.println("===>HelloServlet 객체 생성");
+       System.out.println("===> HelloServlet 생성");
     }
 
 	/**
@@ -24,8 +25,8 @@ public class HelloServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("doGet()");
-		response.getWriter().append("Served at: doGet()").append(request.getContextPath());
+		System.out.println("doGet() 메소드 호출");   //콘솔에 표시되는 부분 
+		response.getWriter().append("Served at: doGet()").append(request.getContextPath());  // 웹페이지에 출력되는 부분 
 	}
 
 }

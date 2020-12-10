@@ -13,5 +13,4 @@ public class BeanFactory {
 		
 		return null;
 	}
-
 }

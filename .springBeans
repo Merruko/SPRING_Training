@@ -7,8 +7,13 @@
 	</configSuffixes>
 	<enableImports><![CDATA[true]]></enableImports>
 	<configs>
-		<config>src/main/resources/applicationContext.xml</config>
-		<config>src/main/resources/collectionBeanContext.xml</config>
+		<config>src/main/java/ex4/test4.xml</config>
+		<config>src/main/java/ex5/test5.xml</config>
+		<config>src/main/resources/test6.xml</config>
+		<config>src/main/java/ex7/test7.xml</config>
+		<config>src/main/resources/test2.xml</config>
+		<config>src/main/resources/test.xml</config>
+		<config>src/main/java/ex3/test3.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
