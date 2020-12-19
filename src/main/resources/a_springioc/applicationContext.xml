@@ -6,8 +6,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 	
-	<context:component-scan base-package="a_springioc.polymorphism"></context:component-scan>
-	<bean class="a_springioc.polymorphism.SonySpeaker"></bean>
+	<context:component-scan base-package="a_springIOC.polymorphism"></context:component-scan>
+	<bean class="a_springIOC.polymorphism.SonySpeaker"></bean>
 	 
 	<!-- <bean id="tv" class="com.springbook.polymorphism.SamsungTV" p:speaker-ref="sony" p:price="27000">
 	</bean>

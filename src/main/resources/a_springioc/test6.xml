@@ -5,9 +5,9 @@
 	
 	<!-- 1번 방법 -->
 	
-	<bean id="service" class="a_springioc.ex6.JdbcService" >
+	<bean id="service" class="a_springIOC.ex6.JdbcService" >
 		<property name="jdbcDao">
-			<bean id="dao" class="a_springioc.ex6.JdbcDao" />
+			<bean id="dao" class="a_springIOC.ex6.JdbcDao" />
 		</property>
 	</bean>
 	
@@ -15,9 +15,9 @@
 	
 	2번 방법
 	
-	<bean id="dao" class="a_springloc.ex6.JdbcDao" />
+	<bean id="dao" class="a_springIOC.ex6.JdbcDao" />
 	
-	<bean id="service" class="a_springloc.ex6.JdbcService" >
+	<bean id="service" class="a_springIOC.ex6.JdbcService" >
 		<property name="jdbcDao" ref="dao" />
 	</bean>
 	

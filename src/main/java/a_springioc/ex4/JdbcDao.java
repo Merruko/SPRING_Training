@@ -1,4 +1,4 @@
-package a_springioc.ex4;
+package a_springIOC.ex4;
 
 public class JdbcDao {
 	

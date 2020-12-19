@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 	
-	<bean id="exam" class="a_springioc.ex2.ExamTest" factory-method="getInstance" />
+	<bean id="exam" class="a_springIOC.ex2.ExamTest" factory-method="getInstance" />
 	<!-- 싱글톤이라 factory-method 속성의 추가가 필요 -->
 	
 </beans>

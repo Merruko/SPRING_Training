@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean id="productService" class="a_springioc.sample.di.business.service.ProductServiceImpl" autowire="byType" />
-<bean id="productDao" class="a_springioc.sample.di.dataaccess.ProductDaoImpl" />
+<bean id="productService" class="a_springIOC.sample.di.business.service.ProductServiceImpl" autowire="byType" />
+<bean id="productDao" class="a_springIOC.sample.di.dataaccess.ProductDaoImpl" />
 
 </beans>

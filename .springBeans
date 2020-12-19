@@ -7,12 +7,6 @@
 	</configSuffixes>
 	<enableImports><![CDATA[true]]></enableImports>
 	<configs>
-		<config>src/main/java/b_annot/config/applicationContext.xml</config>
-		<config>src/main/resources/c_biz/applicationContext.xml</config>
-		<config>src/main/java/a_springioc/ex4/test4.xml</config>
-		<config>src/main/java/a_springioc/ex5/test5.xml</config>
-		<config>src/main/java/a_springioc/ex7/test7.xml</config>
-		<config>src/main/java/a_springioc/sample/config/applicationContext.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

@@ -1,4 +1,4 @@
-package a_springioc.injection;
+package a_springIOC.injection;
 
 import java.util.List;
 import java.util.Map;

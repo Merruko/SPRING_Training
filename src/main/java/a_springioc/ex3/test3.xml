@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-	<bean id="examDao" class="a_springioc.ex3.ExamDao">
+	<bean id="examDao" class="a_springIOC.ex3.ExamDao">
 		<constructor-arg value="TEST TEST TEST"></constructor-arg>
 		<!-- 컨스트럭터 : 생성자한테 파라미터 줄 때 -->
 		<!-- ref : 참조 자료형 // value : 기본 자료형 -->

@@ -1,4 +1,4 @@
-package a_springioc.ex2;
+package a_springIOC.ex2;
 
 public class ExamTest {	// SingleTon 패턴 
 	// 싱글톤 클래스 명과 동일한 private static 인스턴스 멤버변수가 있어야함

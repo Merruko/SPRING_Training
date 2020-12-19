@@ -1,6 +1,6 @@
-package a_springioc.sample.di.business.service;
+package a_springIOC.sample.di.business.service;
 
-import a_springioc.sample.di.business.domain.Product;
+import a_springIOC.sample.di.business.domain.Product;
 
 public class ProductServiceImpl implements ProductService {
 	

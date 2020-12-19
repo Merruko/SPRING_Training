@@ -1,4 +1,4 @@
-package a_springioc.polymorphism;
+package a_springIOC.polymorphism;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
@@ -39,7 +39,7 @@ public class TVUser {
 //		tv.powerOff();
 		
 //		//1. spring 컨테이너를 구동 
-		AbstractApplicationContext factory = new GenericXmlApplicationContext("a_springioc/applicationContext.xml");
+		AbstractApplicationContext factory = new GenericXmlApplicationContext("a_springIOC/applicationContext.xml");
 		
 //		//2. spring 컨테이너로부터 필요한 객체를 요청 
 		TV tv = (TV)factory.getBean("tv");

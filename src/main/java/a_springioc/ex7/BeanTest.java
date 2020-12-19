@@ -1,4 +1,4 @@
-package a_springioc.ex7;
+package a_springIOC.ex7;
 
 public class BeanTest {
 

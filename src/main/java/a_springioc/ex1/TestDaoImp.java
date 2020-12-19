@@ -1,4 +1,4 @@
-package a_springioc.ex1;
+package a_springIOC.ex1;
 
 public class TestDaoImp implements TestDao {
 

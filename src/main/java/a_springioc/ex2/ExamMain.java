@@ -1,4 +1,4 @@
-package a_springioc.ex2;
+package a_springIOC.ex2;
 
 import org.springframework.context.ApplicationContext;
 //import org.springframework.context.support.AbstractApplicationContext;
@@ -18,7 +18,7 @@ public class ExamMain {
 		// AbstractApplicationContext context = new GenericXmlApplicationContext(text.xml);
 		
 		// 2. 파일의 경로를 서술해야 함
-		ApplicationContext context = new FileSystemXmlApplicationContext("src/main/resources/a_springioc/test2.xml");
+		ApplicationContext context = new FileSystemXmlApplicationContext("src/main/resources/a_springIOC/test2.xml");
 		
 		ExamTest examTest = (ExamTest) context.getBean("exam");
 		

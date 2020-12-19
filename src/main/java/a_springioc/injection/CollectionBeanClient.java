@@ -1,4 +1,4 @@
-package a_springioc.injection;
+package a_springIOC.injection;
 
 import java.util.HashSet;
 import java.util.List;
@@ -12,7 +12,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 public class CollectionBeanClient {
 
 	public static void main(String[] args) {
-		AbstractApplicationContext factory = new GenericXmlApplicationContext("a_springioc/collectionBeanContext.xml");
+		AbstractApplicationContext factory = new GenericXmlApplicationContext("a_springIOC/collectionBeanContext.xml");
 		CollectionBean bean = (CollectionBean) factory.getBean("collectionBean");
 		Properties addressList = bean.getAddressList();
 		

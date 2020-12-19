@@ -1,4 +1,4 @@
-package a_springioc.polymorphism;
+package a_springIOC.polymorphism;
 
 public class BeanFactory {
 	

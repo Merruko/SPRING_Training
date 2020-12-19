@@ -1,4 +1,4 @@
-package a_springioc.ex6;
+package a_springIOC.ex6;
 
 public class JdbcService {
 

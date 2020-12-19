@@ -1,7 +1,7 @@
-package a_springioc.sample.di.dataaccess;
+package a_springIOC.sample.di.dataaccess;
 
-import a_springioc.sample.di.business.domain.Product;
-import a_springioc.sample.di.business.service.ProductDao;
+import a_springIOC.sample.di.business.domain.Product;
+import a_springIOC.sample.di.business.service.ProductDao;
 
 public class ProductDaoImpl implements ProductDao {
 	

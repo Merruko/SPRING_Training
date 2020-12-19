@@ -1,4 +1,4 @@
-package a_springioc.ex5;
+package a_springIOC.ex5;
 
 public class IbatisService {
 	

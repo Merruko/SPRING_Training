@@ -1,4 +1,4 @@
-package a_springioc.sample.di.business.domain;
+package a_springIOC.sample.di.business.domain;
 
 public class Product {
 	

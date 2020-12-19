@@ -1,4 +1,4 @@
-package a_springioc.ex7;
+package a_springIOC.ex7;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
@@ -11,7 +11,7 @@ public class ExamMain {
 
 	public static void main(String[] args) {
 
-		ApplicationContext context = new FileSystemXmlApplicationContext("src/main/java/a_springioc/ex7/test7.xml");
+		ApplicationContext context = new FileSystemXmlApplicationContext("src/main/java/a_springIOC/ex7/test7.xml");
 		BeanTest beanTest1 = (BeanTest) context.getBean("beanTest");
 		BeanTest beanTest2 = (BeanTest) context.getBean("beanTest");
 		

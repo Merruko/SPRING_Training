@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd">
+
+		<context:component-scan base-package="c_springAOP"></context:component-scan>
+
+<!--
+	<bean id="userService" class="c_springAOP.user.Impl.UserServiceImpl">
+		<property name="userDAO" ref="userDAO"></property>
+	</bean>
+	<bean id="userDAO" class="c_springAOP.user.Impl.UserDAO"></bean>
+-->
+ 
+<!-- AOP 포인트컷
+	<bean id="log" class="c_springAOP.common.LogAdvice"></bean>
+	
+	<aop:config>
+	 /**주석처리 <aop:pointcut id="allPointcut" expression="execution(* c_springAOP..*Impl.*(..))" /> 주석처리**/
+		/**주석처리 <aop:before pointcut-ref="getPointcut" method="printLogging" /> 주석처리**/ 
+		<aop:pointcut id="getPointcut" expression="execution(* c_springAOP..*Impl.get*(..))" />
+		
+		<aop:aspect ref="log" >			
+			<aop:before pointcut-ref="getPointcut" method="printLog" />
+		</aop:aspect>
+	</aop:config>
+-->
+ 
+ <!-- AOP Before 어드바이스 
+	<bean id="before" class="c_springAOP.common.BeforeAdvice"></bean>
+	
+	<aop:config>
+		<aop:pointcut id="allPointcut" expression="execution(* c_springAOP..*Impl.*(..))" />
+		
+		<aop:aspect ref="before" >
+			<aop:before pointcut-ref="allPointcut" method="beforeLog" />
+		</aop:aspect>
+	</aop:config>
+-->
+
+<!-- AOP After Returning 어드바이스	
+ 	<bean id="afterReturning" class="c_springAOP.common.AfterReturningAdvice"></bean>
+	
+	<aop:config>
+		<aop:pointcut id="getPointcut" expression="execution(* c_springAOP..*Impl.get*(..))" />
+		
+		<aop:aspect ref="afterReturning" >
+			<aop:after-returning pointcut-ref="getPointcut" method="afterLog" returning="returnObj"/>
+		</aop:aspect>
+	</aop:config>
+-->
+
+<!-- AOP After Throwing 어드바이스
+ 	<bean id="afterThrowing" class="c_springAOP.common.AfterThrowingAdvice"></bean>
+	
+	<aop:config>
+		<aop:pointcut id="allPointcut" expression="execution(* c_springAOP..*Impl.*(..))" />
+		
+		<aop:aspect ref="afterThrowing" >
+			<aop:after-throwing pointcut-ref="allPointcut" method="exceptionLog" throwing="exceptionObj"/>
+		</aop:aspect>
+	</aop:config>
+-->
+ 
+<!-- AOP After 어드바이스
+ 	<bean id="afterThrowing" class="c_springAOP.common.AfterThrowingAdvice"></bean>
+ 	<bean id="after" class="c_springAOP.common.AfterAdvice"></bean>
+	
+	<aop:config>
+		<aop:pointcut id="allPointcut" expression="execution(* c_springAOP..*Impl.*(..))" />
+		<aop:aspect ref="afterThrowing" >
+			<aop:after-throwing pointcut-ref="allPointcut" method="exceptionLog" />
+		</aop:aspect>
+		
+		<aop:aspect ref="after" >
+			<aop:after pointcut-ref="allPointcut" method="finallyLog" />
+		</aop:aspect>
+	</aop:config>
+ -->
+ 
+ <!-- AOP Around 어드바이스 -->
+ 	<bean id="around" class="c_springAOP.common.AroundAdvice"></bean>
+ 	
+	<aop:config>
+		<aop:pointcut id="allPointcut" expression="execution(* c_springAOP..*Impl.*(..))" />
+		
+		<aop:aspect ref="around" >
+			<aop:around pointcut-ref="allPointcut" method="aroundLog" />
+		</aop:aspect>		
+	</aop:config>
+
+
+</beans>

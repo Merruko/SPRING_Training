@@ -1,4 +1,4 @@
-package a_springioc.ex3;
+package a_springIOC.ex3;
 
 public class ExamDao {
 
