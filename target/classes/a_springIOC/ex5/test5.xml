@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="ibatis" class="a_springIOC.ex5.IbatisDao" />
+	<bean id="service" class="a_springIOC.ex5.IbatisService" >
+		<property name="ibatisDao" ref="ibatis" />
+		<!-- 프로퍼티 : 세터 메서드한테 파라미터 줄 때 -->
+		<!-- ref : 참조 자료형 // value : 기본 자료형 -->
+		<!-- ref 값은 <bean id="ibatis" class="ex5.IbatisDao" /> 요거랑 맞춘거임 -->
+	</bean>
+
+</beans>
