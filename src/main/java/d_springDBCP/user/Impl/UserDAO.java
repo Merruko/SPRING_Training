@@ -21,6 +21,7 @@ public class UserDAO {
 	public UserVO getUser(UserVO vo) {
 		UserVO user = null;
 		try {
+			System.out.println("===> getUser() 기능 처리");
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String url = "jdbc:oracle:thin:@localhost:1521:orcl";
 			conn = DriverManager.getConnection(url, "hr", "1234");

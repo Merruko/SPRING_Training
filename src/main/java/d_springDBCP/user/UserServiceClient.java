@@ -23,7 +23,7 @@ public class UserServiceClient {
 		UserVO user = userService.getUser(vo);
 		if(user != null) {
 			System.out.println(user.getName() + "님 환영합니다.");
-		}else {
+		} else {
 			System.out.println("로그인 실패");
 		}
 		
