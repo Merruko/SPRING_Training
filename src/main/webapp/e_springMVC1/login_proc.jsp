@@ -18,6 +18,6 @@
 	if(user != null){
 		response.sendRedirect("getBoardList.jsp");
 	} else {
-		response.sendRedirect("login.jsp");
+		response.sendRedirect("h_login.jsp");
 	}
 %>

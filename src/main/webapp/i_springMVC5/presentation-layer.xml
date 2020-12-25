@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+	
+	<context:component-scan base-package="i_springMVC5.view"></context:component-scan>
+	
+	<!-- HandlerMapping 등록 -->
+	<bean id="handlerMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/login.do">login</prop>
+				<prop key="/getBoardList.do">getBoardList</prop>
+				<prop key="/getBoard.do">getBoard</prop>
+				<prop key="/insertBoard.do">insertBoard</prop>
+				<prop key="/updateBoard.do">updateBoard</prop>
+				<prop key="/deleteBoard.do">deleteBoard</prop>
+				<prop key="/logout.do">logout</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!-- Controller 등록 -->
+	<bean id="login" class="i_springMVC5.view.user.LoginController" />
+	<bean id="getBoardList" class="i_springMVC5.view.board.BoardController" />
+	<bean id="getBoard" class="i_springMVC5.view.board.BoardController" />
+	<bean id="insertBoard" class="i_springMVC5.view.board.BoardController" />
+	<bean id="updateBoard" class="i_springMVC5.view.board.BoardController" />
+	<bean id="deleteBoard" class="i_springMVC5.view.board.BoardController" />
+	<bean id="logout" class="i_springMVC5.view.user.LogoutController" />
+	
+	<!-- ViewResolver 등록 -->
+	<!-- <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/" />
+		<property name="suffix" value=".jsp" />
+	</bean> -->
+	
+	
+</beans>

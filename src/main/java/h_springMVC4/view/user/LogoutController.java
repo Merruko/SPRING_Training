@@ -7,9 +7,6 @@ import javax.servlet.http.HttpSession;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
 
-import h_springMVC4.biz.user.UserVO;
-import h_springMVC4.biz.user.impl.UserDAO;
-
 public class LogoutController implements Controller {
 
 	@Override
@@ -22,6 +19,9 @@ public class LogoutController implements Controller {
 		session.invalidate();
 
 //		2) 세션 종료 후, 메인 화면으로 이동 
-		return "login";
+//		return "login";
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("redirect:h_login.jsp");
+		return mav;
 	}
 }

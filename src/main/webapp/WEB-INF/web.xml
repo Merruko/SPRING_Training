@@ -4,8 +4,8 @@
 		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 			 https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 
+<!-- a_springIOC -->
 <!--
-  
   <servlet>
     <description></description>
     <display-name>helloServlet</display-name>
@@ -17,55 +17,94 @@
     <servlet-name>helloServlet</servlet-name>
     <url-pattern>/hello.do</url-pattern>
   </servlet-mapping>
-  
 -->
 
+<!-- f_springMVC2 -->
 <!--
- 
   <servlet>
     <servlet-name>action</servlet-name>
     <servlet-class>f_springMVC2.view.controller.DispatcherServlet</servlet-class>
-  </servlet>
-  
--->
- 
-<!-- 
- 
-  <servlet>
-    <servlet-name>action</servlet-name>
-    <servlet-class>g_springMVC3.view.controller.DispatcherServlet</servlet-class>
-  </servlet>
-
--->
-
-  <filter>
-  	<filter-name>characterEncoding</filter-name>
-    <filter-class>org.springframework.web.filter
-    				.CharacterEncodingFilter</filter-class>
-    <init-param>
-    	<param-name>encoding</param-name>
-    	<param-value>UTF-8</param-value>
-    </init-param>
-  </filter>
-  
-  <filter-mapping>
-  	<filter-name>characterEncoding</filter-name>
-  	<url-pattern>*.do</url-pattern>
-  </filter-mapping>
-
-  <servlet>
-  	<servlet-name>action</servlet-name>
-  	<servlet-class>org.springframework.web.servlet.DispathcerServlet</servlet-class>
-  	<init-param>
-  		<param-name>contextConfigLocation</param-name>
-  		<param-value>/WEB-INF/h_springMVC4/presentation-layer.xml</param-value>
-  	</init-param>
   </servlet>
   
   <servlet-mapping>
     <servlet-name>action</servlet-name>
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
+-->
+
+<!-- g_springMVC3 -->
+<!--
+  <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>g_springMVC3.view.controller.DispatcherServlet</servlet-class>
+  </servlet>
   
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+-->
+
+<!-- h_springMVC4 -->
+<!--
+  <filter>
+	 <filter-name>characterEncoding</filter-name>
+	 <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class> 
+	 <init-param>
+	   <param-name>encoding</param-name>
+	   <param-value>UTF-8</param-value>
+	 </init-param> 
+  </filter>
+	
+  <filter-mapping>
+  <filter-name>characterEncoding</filter-name>
+  <url-pattern>*.do</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>action</servlet-name>	
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  <init-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/h_springMVC4/presentation-layer.xml</param-value>
+  </init-param>
+  </servlet>
   
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+-->
+
+<!-- i_springMVC5 --><!---->
+
+  <filter>
+	<filter-name>characterEncoding</filter-name>
+	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class> 
+	<init-param>
+		<param-name>encoding</param-name>
+		<param-value>UTF-8</param-value>
+	</init-param> 
+  </filter>
+	
+  <filter-mapping>
+  <filter-name>characterEncoding</filter-name>
+  <url-pattern>*.do</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>action</servlet-name>	
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+    	<param-name>contextConfigLocation</param-name>
+    	<param-value>/i_springMVC5/presentation-layer.xml</param-value>
+    </init-param>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+
+
 </web-app>
