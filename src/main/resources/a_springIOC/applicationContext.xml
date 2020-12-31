@@ -9,9 +9,9 @@
 	<context:component-scan base-package="a_springIOC.polymorphism"></context:component-scan>
 	<bean class="a_springIOC.polymorphism.SonySpeaker"></bean>
 	 
-	<!-- <bean id="tv" class="com.springbook.polymorphism.SamsungTV" p:speaker-ref="sony" p:price="27000">
+	<!-- <bean id="tv" class="a_springIOC.polymorphism.SamsungTV" p:speaker-ref="sony" p:price="27000">
 	</bean>
-	<bean id="sony" class="com.springbook.polymorphism.SonySpeaker"/>
-	<bean id="apple" class="com.springbook.polymorphism.AppleSpeaker"/> -->
+	<bean id="sony" class="a_springIOC.polymorphism.SonySpeaker"/>
+	<bean id="apple" class="a_springIOC.polymorphism.AppleSpeaker"/> -->
 	
 </beans>

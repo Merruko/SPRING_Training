@@ -1,7 +1,7 @@
 package i_springMVC5.biz.user;
 
 public interface UserService {
-	// CRUD 기능의 메소드 구현 
-	// 회원등록 
+	// CRUD 기능의 메소드 구현
+	// 회원 등록
 	public UserVO getUser(UserVO vo);
 }

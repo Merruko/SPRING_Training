@@ -2,40 +2,56 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
-	
+
 	<context:component-scan base-package="i_springMVC5.view"></context:component-scan>
+	<mvc:annotation-driven></mvc:annotation-driven>
 	
-	<!-- HandlerMapping 등록 -->
-	<bean id="handlerMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-		<property name="mappings">
+	<!-- 파일 업로드 설정 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="100000" />
+	</bean>
+
+	<!-- 예외 처리 설정 -->
+	<bean id="exceptionResolver"
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
 			<props>
-				<prop key="/login.do">login</prop>
-				<prop key="/getBoardList.do">getBoardList</prop>
-				<prop key="/getBoard.do">getBoard</prop>
-				<prop key="/insertBoard.do">insertBoard</prop>
-				<prop key="/updateBoard.do">updateBoard</prop>
-				<prop key="/deleteBoard.do">deleteBoard</prop>
-				<prop key="/logout.do">logout</prop>
+				<prop key="java.lang.ArithmeticException">
+					i_springMVC5/arithmeticError.jsp
+				</prop>
+				<prop key="java.lang.NullPointerException">
+					i_springMVC5/nullPointerError.jsp
+				</prop>
 			</props>
 		</property>
+		<property name="defaultErrorView" value="i_springMVC5/error.jsp" />
 	</bean>
 	
-	<!-- Controller 등록 -->
-	<bean id="login" class="i_springMVC5.view.user.LoginController" />
-	<bean id="getBoardList" class="i_springMVC5.view.board.BoardController" />
-	<bean id="getBoard" class="i_springMVC5.view.board.BoardController" />
-	<bean id="insertBoard" class="i_springMVC5.view.board.BoardController" />
-	<bean id="updateBoard" class="i_springMVC5.view.board.BoardController" />
-	<bean id="deleteBoard" class="i_springMVC5.view.board.BoardController" />
-	<bean id="logout" class="i_springMVC5.view.user.LogoutController" />
-	
-	<!-- ViewResolver 등록 -->
-	<!-- <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/" />
-		<property name="suffix" value=".jsp" />
-	</bean> -->
-	
+	<!-- 다국어 설정 -->
+	<!-- MessageSource 등록 -->
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>i_springMVC5.messageSource</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- LocaleResolver 등록 -->
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.SessionLocaleResolver"></bean>
+
+	<!-- LocaleChangeInterceptor 등록 -->
+	<mvc:interceptors>
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+			<property name="paramName" value="lang" />
+		</bean>
+	</mvc:interceptors>
 	
 </beans>

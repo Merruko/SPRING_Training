@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import e_springMVC1.board.BoardService;
 import e_springMVC1.board.BoardVO;
-//import com.springbook.biz.common.LogAdvice;
+//import e_springMVC1.biz.common.LogAdvice;
 
 @Service("boardService")
 public class BoardServiceImpl implements BoardService {
