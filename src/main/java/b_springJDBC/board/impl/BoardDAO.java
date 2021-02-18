@@ -21,12 +21,12 @@ public class BoardDAO implements BoardService {
 	private ResultSet rs = null;
 	
 	// SQL명령어들
-	private final String BOARD_INSERT = "INSERT INTO board(seq, title, writer, "
-			+ "			content) VALUES((SELECT nvl(max(seq), 0)+1 FROM board),?,?,?)";
-//	private final String BOARD_UPDATE = "UPDATE board SET title=?, content=? WHERE seq=?";
-//	private final String BOARD_DELETE = "DELETE board WHERE seq=?";
-	private final String BOARD_GET = "SELECT * FROM board WHERE seq=?";
-	private final String BOARD_LIST = "SELECT * FROM board ORDER BY seq DESC";
+	private final String BOARD_INSERT = "INSERT INTO r_board(seq, title, writer, "
+			+ "			content) VALUES((SELECT nvl(max(seq), 0)+1 FROM r_board),?,?,?)";
+//	private final String BOARD_UPDATE = "UPDATE r_board SET title=?, content=? WHERE seq=?";
+//	private final String BOARD_DELETE = "DELETE r_board WHERE seq=?";
+	private final String BOARD_GET = "SELECT * FROM r_board WHERE seq=?";
+	private final String BOARD_LIST = "SELECT * FROM r_board ORDER BY seq DESC";
 	
 	// CRUD 기능의 메소드 구현
 	// 글 등록

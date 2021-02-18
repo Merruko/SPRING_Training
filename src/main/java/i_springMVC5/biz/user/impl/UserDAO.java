@@ -17,7 +17,7 @@ public class UserDAO {
 	private PreparedStatement stmt = null;
 	private ResultSet rs = null;
 	// SQL 명령어들
-	private final String USER_GET = "select * from users where id=? and password=?";
+	private final String USER_GET = "select * from r_users where id=? and password=?";
 
 	// CRUD 기능의 메소드 구현
 	// 회원 등록

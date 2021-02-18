@@ -15,7 +15,7 @@ public class UserDAO {
 	private PreparedStatement stmt = null;
 	private ResultSet rs = null;
 	
-	private static final String USER_GET = "select * from users where id=?";
+	private static final String USER_GET = "select * from r_users where id=?";
 	
 	// 회원 상세조회 
 	public UserVO getUser(UserVO vo) {

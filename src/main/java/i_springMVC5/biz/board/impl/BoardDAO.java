@@ -19,13 +19,13 @@ public class BoardDAO {
 	private PreparedStatement stmt = null;
 	private ResultSet rs = null;
 	// SQL 명령어들
-	private final String BOARD_INSERT = "insert into board(seq, title, writer, content) values((select nvl(max(seq), 0)+1 from board),?,?,?)";
-	private final String BOARD_UPDATE = "update board set title=?, content=? where seq=?";
-	private final String BOARD_DELETE = "delete board where seq=?";
-	private final String BOARD_GET = "select * from board where seq=?";
-	private final String BOARD_LIST = "select * from board order by seq desc";
-	private final String BOARD_LIST_T = "select * from board where title like '%'||?||'%' order by seq desc";
-	private final String BOARD_LIST_C = "select * from board where content like '%'||?||'%' order by seq desc";
+	private final String BOARD_INSERT = "insert into r_board(seq, title, writer, content) values((select nvl(max(seq), 0)+1 from r_board),?,?,?)";
+	private final String BOARD_UPDATE = "update r_board set title=?, content=? where seq=?";
+	private final String BOARD_DELETE = "delete r_board where seq=?";
+	private final String BOARD_GET = "select * from r_board where seq=?";
+	private final String BOARD_LIST = "select * from r_board order by seq desc";
+	private final String BOARD_LIST_T = "select * from r_board where title like '%'||?||'%' order by seq desc";
+	private final String BOARD_LIST_C = "select * from r_board where content like '%'||?||'%' order by seq desc";
 
 	// CRUD 기능의 메소드 구현
 	// 글 등록
