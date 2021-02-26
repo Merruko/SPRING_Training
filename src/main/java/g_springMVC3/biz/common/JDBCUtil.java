@@ -19,7 +19,7 @@ public class JDBCUtil {
 			
 //			oracle 연동 
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			return DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "hr", "1234");
+			return DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "HR", "1234");
 			
 		} catch(Exception e) {
 			e.printStackTrace();
